@@ -1,0 +1,403 @@
+
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
+        /* font-family: 'Ubuntu', sans-serif; */
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@700&display=swap');
+        /* font-family: 'Ubuntu Mono', monospace; */
+
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        /* CONTACT SECTION */
+        #contact_sec {
+            height: 700px;
+            display: grid;
+            grid-template-areas:
+                "tt tt ff ff";
+            /* justify-content: center;
+            align-items: center; */
+        }
+
+        #contact_sec::before {
+            content: "";
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            background: center/cover no-repeat url("contact_bg2.jpg");
+            z-index: -1;
+            opacity: 1;
+        }
+
+        /* //MAIN CONTACT SECTION ONE (1)*/
+        #main-contact {
+            /* border: 2px solid red; */
+            width: 1000px;
+            height: 600px;
+            position: relative;
+            top: 100px;
+            left: -100px;
+            grid-area: ff;
+            color: white;
+
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            
+        }
+
+        #main-contact::before {
+            content: "";
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            /* background: black; */
+            background: rgb(63, 44, 117);
+            z-index: -1;
+            opacity: 0.6;
+
+        }
+        /* FORMS STARTED */
+        #main-form{
+            display: grid;
+            grid-template-areas:
+             "aaa aaa bbb bbb"
+             "ccc ccc ddd ddd"
+             "eee eee fff fff"
+             "ggg ggg ggg ggg"
+             "hhh hhh hhh hhh";
+             margin-top: -222px
+        }
+       
+        .form{
+            position: relative;
+            width: 20rem; 
+            height: 2rem;
+            margin-top: 25px;
+        
+            
+
+        }
+        .form__input{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border:2px solid #ffffff2e;
+            border-radius: 7px;
+            background: none;
+            outline: none;
+            font-family: inherit;
+            font-size: inherit;
+            color: white;
+            padding-left: 6px;
+            font-size: 15px;
+            font-family: 'Ubuntu', sans-serif;
+
+            
+            }
+            .form__input:hover{
+                border: 2px solid #ffffff94;
+            }
+            .form__input:focus{
+                border: 3px solid white;
+            }
+            .form__label{
+                position: absolute;
+                left: 0.3rem;
+                top: 0.2rem;
+                font-size: 20px;
+                font-family: 'Ubuntu Mono', monospace;
+                cursor: text;
+                /* padding: 0 2.1rem; */
+                transition: top 200ms ease-in,
+                left 200ms ease-in,
+                font-size 200ms ease-in;
+            }
+            .form__input:focus ~ .form__label,
+            .form__input:not(:placeholder-shown).form__input:not(:focus)~.form__label
+            {
+                top: -1.2rem;
+                font-size: 1.1rem;
+                color: #ffffff70;
+                
+            }
+
+
+            /*FOR MAINTAIN OUR FORMS */
+            #form1{
+                grid-area: aaa;
+                margin-left: 215px;
+                
+            }
+            #form2{
+                grid-area: bbb;
+                margin-left: 30px;
+            }
+            #form3{
+                grid-area: ccc;
+                margin-left: 215px;
+                font-size: 20px;
+                font-family: 'Ubuntu Mono', monospace;
+            }
+            #form3 label{
+                border: 2px solid #ffffff2e;
+                border-radius: 5px;
+                padding: 2px;
+                font-size: 16px;
+                font-family: 'Ubuntu', sans-serif;
+                margin-right: 10px;
+            }
+            #form3 label:hover{
+                border: 2px solid white;
+                background-color: blue;
+            }
+            #form4{
+                grid-area: ddd;
+                margin-left: 30px;
+                font-size: 18px;
+                font-family: 'Ubuntu Mono', monospace;
+                border: 2px solid #ffffff2e;
+                border-radius: 7px;
+                padding: top;
+                padding-top: 3px;
+                padding-left: 3px;
+            }
+            #form4 select{
+                width: 9rem;
+                border: none;
+                outline: none;
+                border-radius: 3px;
+                font-family: 'Ubuntu', sans-serif;
+                background-color: white;
+                padding: 2px;
+            }
+            #form5{
+                margin-left: 215px;
+                grid-area: eee;
+            }
+            #form6{
+                grid-area: fff;
+                margin-left: 30px;
+            }
+            #form7{
+                position: relative;
+                margin-left: 215px;
+                grid-area: ggg;
+
+                height: 5rem;
+                width:42rem;
+                margin-top: 50px;
+            }
+
+            /* //FOR ID FORM7 */
+            #textarea{
+                position:absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                outline: none;
+                border: 2px solid #ffffff2e;
+                border-radius: 7px;
+                font-size: 15px;
+                color: white;
+                background: none;
+                font-family: 'Ubuntu', sans-serif;
+                padding-left: 6px;
+                padding-top: 10px;
+            }
+            #textarea:hover{
+                border:2px solid #ffffff94;
+            }
+            #textarea:focus{
+                border:3px solid white;
+            }
+            .form__Textarea__label{
+                position: absolute;
+                left: 0.3rem;
+                top: 0.2rem;
+                font-size: 20px;
+                font-family: 'Ubuntu Mono', monospace;
+                cursor: text;
+                /* padding: 0 2.1rem; */
+                transition: top 200ms ease-in,
+                left 200ms ease-in,
+                font-size 200ms ease-in;
+            }
+            #textarea:focus ~ .form__Textarea__label,
+            #textarea:not(:placeholder-shown)#textarea:not(:focus)~.form__Textarea__label
+            {
+                top: -1.2rem;
+                font-size: 1.1rem;
+                color: #ffffff70;
+                
+            }
+            #btn{
+                margin-left: 215px;
+                grid-area: hhh;
+                height: 1rem;
+            }
+            button{
+                font-weight: bold;
+                /* margin-top: 20px; */
+                height: 2.3rem;
+                width: 8rem;
+                border-radius: 5px;
+                outline: none;
+                border: none;
+                font-family: 'Ubuntu Mono', monospace;
+                font-size: 1.5rem;
+                background-color: white;
+            }
+            button:hover{
+                background-color: red;
+                color: white;
+            }
+
+
+
+
+            #main-contact #heading{
+                margin-left: 215px;
+                margin-top: -186px;
+            }
+            
+            #main-contact #heading h1{
+                font-family: 'Ubuntu Mono', monospace;
+                font-size: 2rem;
+            }
+            
+            #main-contact #heading p{
+                font-family: 'Ubuntu', sans-serif;
+                font-size: 0.9rem;
+                color: #ba9eed;
+                
+            }
+            
+
+
+
+
+
+        
+
+        /* //MAIN CONTACT SECTION TWO(2) */
+        #main-contact2 {
+            /* border: 2px solid red; */
+            background-color: white;
+            width: 400px;
+            height: 500px;
+            grid-area: tt;
+            position: relative;
+            top: 150px;
+            left: 150px;
+            font-family: 'Ubuntu', sans-serif;
+            display: grid;
+            grid-template-areas:
+                "a a a a"
+                "b b c c"
+                "d d e e"
+                "f f g g"
+                "h h h h";
+        }
+
+        #main-contact2 #item1 {
+            /* border: 1px solid red; */
+            grid-area: a;
+            height: 50px;
+            margin: 40px 0px 0px 40px;
+            font-size: 30px;
+        }
+
+        #main-contact2 #item2 {
+            /* border: 1px solid red; */
+            grid-area: b;
+            height: 50px;
+            width: 30px;
+            margin: -50px 0px 0px 40px;
+        }
+
+        #main-contact2 #item2 img {
+            height: 82px;
+            margin-top: -40px;
+            margin-left: -25px;
+        }
+
+        #main-contact2 #item3 {
+            /* border: 1px solid red; */
+            color: gray;
+            grid-area: c;
+            width: 200px;
+            height: 50px;
+            margin-top: -50px;
+            margin-left: -100px;
+        }
+
+        #main-contact2 #item4 {
+            /* border: 1px solid red; */
+            grid-area: d;
+            height: 50px;
+            width: 30px;
+            margin-top: -65px;
+            margin-left: 40px;
+        }
+
+        #main-contact2 #item4 img {
+            height: 83px;
+            margin-top: -10px;
+            margin-left: -15px;
+        }
+
+        #main-contact2 #item5 {
+            /* border: 1px solid red; */
+            color: gray;
+            grid-area: e;
+            margin-top: -46px;
+            margin-left: -96px;
+            width: 200px;
+            height: 50px;
+        }
+
+        #main-contact2 #item6 {
+            /* border: 1px solid red; */
+            grid-area: f;
+            margin-top: -73px;
+            margin-left: 40px;
+            height: 50px;
+            width: 30px;
+        }
+
+        #main-contact2 #item6 img {
+
+            width: 46px;
+        }
+
+        #main-contact2 #item7 {
+            /* border: 1px solid red; */
+            color: gray;
+            margin-top: -63px;
+            margin-left: -97px;
+            height: 50px;
+        }
+
+        #main-contact2 #item8 {
+            /* border: 1px solid red; */
+            grid-area: h;
+            margin-left: 40px;
+            height: 100px;
+
+        }
+
+        #main-contact2 #item8 img {
+            width: 222px;
+            margin-left: -30px;
+        }
+    
